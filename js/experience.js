@@ -166,12 +166,6 @@
   window.addEventListener("beforeprint", expandForPrint);
   window.addEventListener("afterprint", restoreAfterPrint);
 
-  Array.prototype.forEach.call(document.querySelectorAll(".pdf"), function (pdf) {
-    pdf.addEventListener("click", function () {
-      window.print();
-    });
-  });
-
   tabs.forEach(function (tab, index) {
     tab.addEventListener("click", function () {
       select(tab, false);
